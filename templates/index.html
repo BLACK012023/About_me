@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Основная страница
+{% endblock %}
+
+{% block content %}
+<div class="top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="d-flex flex-column justify-content-center top-content">
+                    <h1>Привет!</h1>
+                    <h1>Меня зовут</h1>
+                    <h1 class="top__heading">Саша</h1>
+                    <p class="top__text">Добро пожаловать на мою страницу</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="about pt-3 pb-3" id="about">
+    <div class="container">
+        <div class="row about d-flex justify-content-center align-items-center">
+            <div class="col-md-4 d-flex justify-content-center align-items-center">
+                <img class="w-75" src="static/img/about-photo.png" alt="my photo">
+            </div>
+            <div class="col-md-5">
+                <h2 class="heading">Еще раз привет!</h2>
+                <p class="text">Я начинающий разработчик на Python и это мой первый сайт. Я живу и учусь в
+                    Перми,
+                    в свободное время играю в компьютерные игры и все.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container why">
+    <h2 class="heading text-center mb-3">Почему мне нравится<br>программировать?</h2>
+    <div class="row pt-5">
+        <div class="col-md-4 mb-3">
+            <div class="card h-100">
+                <img src="static/img/blog-1.svg" alt="photo">
+                <div class="card-box p-4">
+                    <p class="card-text">С помощью программирования я могу создавать полезные сайты и делать мир
+                        удобнее.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card h-100">
+                <img src="static/img/blog-2.svg" alt="photo">
+                <div class="card-box p-4">
+                    <p class="card-text">В программировании много интересных задач, никогда не соскучишься!</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card h-100">
+                <img src="static/img/blog-3.svg" alt="photo">
+                <div class="card-box p-4">
+                    <p class="card-text">В программировании ты сразу видишь результат своих усилий.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+     <h1 class="form__title text-danger ">Form Contact</h1>
+    <form class="form" action="https://formspree.io/f/mqkvjbgo" method="POST">
+        <input type="text" name="first" placeholder="First Name" autocomplete="off" required>
+        <input type="text" name="last" placeholder="Last Name" autocomplete="off" required>
+        <input type="email" name="email" placeholder="Email Address" autocomplete="off" required>
+        <textarea rows="5" cols="60" name="message" placeholder="Text..." autocomplete="off" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+{% endblock %}

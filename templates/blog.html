@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Blog
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h1 class="text-dark pt-5 pb-5">Блог</h1>
+    <div class="row pb-5">
+        {% for story in stories %}
+        <div class="col-lg-4 col-md-6 mb-3">
+            <div class="card blog-card mb-4 h-100">
+                {% if story.image %}
+                <img src="../static/img/{{ story.image }}" class="card-img-top" alt="photo">
+                {% endif %}
+                <div class="card-body blog-content">
+                    <h5 class="blog-heading pb-3">
+                        {{ story.head }}</h5>
+                    <p class="blog-text">
+                        {{ story.text|safe }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
